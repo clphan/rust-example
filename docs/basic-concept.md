@@ -1,5 +1,5 @@
 # Variable and Mutability 
-- By default, variables are immutable. Once a value is bound to a name, you can't change the value.
+By default, variables are immutable. Once a value is bound to a name, you can't change the value.
 Options to set it mutable or change value:
   - adding `mut` in front of variable
   - using `shadowing` to change value but keep immutable.
@@ -25,6 +25,7 @@ let x = x + 1;
 let mut spaces = "  ";
 spaces = spaces.len();
 ```
+
 # Data types
 Rust is statically typed language -> it must be know the types of all variables at compile time.
 
@@ -33,8 +34,7 @@ Two data type subsets:
 - compound: group of mutiple value in one type (tuples and arrays).
 
 ## Scalar
-
-- Integer types in Rust (default: i32): 
+Integer types in Rust (default: i32): 
 
 | Length  | Signed | Unsigned |
 |---------|--------|----------|
@@ -44,6 +44,7 @@ Two data type subsets:
 | 64-bit  | i64    | u64      |
 | 128-bit | i128   | u128     |
 | arch    | isize  | usize    |
+|         |        |          |
 
 To easier for read we can use  visual separator _, for example: `1_000` same as `1000`.
 
@@ -56,6 +57,7 @@ Integer literal in Rust:
 | Octal           | 0o77       |
 | Binary          | 0b111_0000 |
 | Byte (u8 only)  | b'A'       |
+|                 |            |
 
 - Floating-point types:
 Allows: f32 (single-precision float) or f64(double precision).
@@ -71,7 +73,8 @@ Allows: f32 (single-precision float) or f64(double precision).
   - char type is four bytes in size
 
 ## Compound types
-### tulple type: fixed length (once declared -> cant grow or shrink in size)
+### tuple type
+- fixed length (once declared -> cant grow or shrink in size)
 - each position in tuple has a type:
 
 ```
@@ -88,6 +91,7 @@ let tup = (1, 1.1, 0);
 let (x, y, z) = tup; // called destructing
 let first_element = tup.0; // access a tuple element
 ```
+
 ### array type
 - every element of an array must have same type.
 - array in Rust have a fixed length.
